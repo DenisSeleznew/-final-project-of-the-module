@@ -1,18 +1,22 @@
 import { Component } from '../core/Component';
 
 export class Form extends Component {
-  setup(props) {
-    this.$rootElement = document.createElement('form');
-    this.$rootElement.className = 'donate-form';
+	setup(props) {
+		this.state = {
+			amount: '',
+		};
+		this.$rootElement = document.createElement('form');
+		this.$rootElement.className = 'donate-form';
+		const $labelDonateForm = document.createElement('label');
+		$labelDonateForm.className = 'donate-form__input-label';
+		// ...
+	}
 
-    // ...
-  }
+	handleInput(event) {
+		// ...
+	}
 
-  handleInput(event) {
-    // ...
-  }
-
-  handleSubmit(event) {
-    // ...
-  }
+	handleSubmit(event) {
+		// ...
+	}
 }

@@ -1,29 +1,29 @@
-import { Component } from '../../core/Component';
-import { DemoButton } from './DemoButton';
+// import { Component } from '../../core/Component';
+// import { DemoButton } from './DemoButton';
 
-export class DemoCounter extends Component {
-  setup(props) {
-    this.state = { 
-      counter: 0 
-    };
+// export class DemoCounter extends Component {
+//   setup(props) {
+//     this.state = {
+//       counter: 0
+//     };
 
-    this.$rootElement = document.createElement('div');
-    
-    const heading = document.createElement('h1');
-    heading.textContent = `${props.title}: ${this.state.counter}`;
-    this.$heading = heading;
+//     this.$rootElement = document.createElement('div');
 
-    const incrementButton = new DemoButton({ text: 'Increment', onClick: this.handleIncrement.bind(this) });
-    const decrementButton = new DemoButton({ text: 'Decrement', onClick: this.handleDecrement.bind(this) });
+//     const heading = document.createElement('h1');
+//     heading.textContent = `${props.title}: ${this.state.counter}`;
+//     this.$heading = heading;
 
-    this.$rootElement.append(heading, incrementButton.$rootElement, decrementButton.$rootElement);
-  }
+//     const incrementButton = new DemoButton({ text: 'Increment', onClick: this.handleIncrement.bind(this) });
+//     const decrementButton = new DemoButton({ text: 'Decrement', onClick: this.handleDecrement.bind(this) });
 
-  handleIncrement() {
-    this.$heading.textContent = `${this.props.title}: ${++this.state.counter}`;
-  }
+//     this.$rootElement.append(heading, incrementButton.$rootElement, decrementButton.$rootElement);
+//   }
 
-  handleDecrement() {
-    this.$heading.textContent = `${this.props.title}: ${--this.state.counter}`;
-  }
-}
+//   handleIncrement() {
+//     this.$heading.textContent = `${this.props.title}: ${++this.state.counter}`;
+//   }
+
+//   handleDecrement() {
+//     this.$heading.textContent = `${this.props.title}: ${--this.state.counter}`;
+//   }
+// }
